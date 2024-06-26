@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"../components/layouts/main.js -> ../voxel-dog\":{\"id\":\"../components/layouts/main.js -> ../voxel-dog\",\"files\":[\"static/chunks/components_voxel-dog_js.js\"]}}"

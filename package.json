@@ -1,0 +1,35 @@
+{
+  "name": "marin_portofolia_homepage",
+  "version": "0.0.1",
+  "description": "Amane Marin's website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Amane Maririn",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@vercel/analytics": "^1.1.1",
+    "framer-motion": "^10.16.4",
+    "i18next": "^23.11.5",
+    "next": "^13.5.6",
+    "next-i18next": "^15.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^4.11.0",
+    "three": "^0.157.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^13.5.6",
+    "prettier": "^3.0.3"
+  }
+}
