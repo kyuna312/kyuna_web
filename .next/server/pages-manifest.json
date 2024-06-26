@@ -1,13 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/works/madokareact": "pages/works/madokareact.js",
-  "/works/mongolnet": "pages/works/mongolnet.js",
-  "/works/nomadx": "pages/works/nomadx.js",
-  "/works/nyanmarkdown": "pages/works/nyanmarkdown.js",
-  "/works/nyanvim": "pages/works/nyanvim.js",
   "/_error": "pages/_error.js",
-  "/works": "pages/works.js",
-  "/": "pages/index.js"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/cv": "pages/cv.js"
 }
