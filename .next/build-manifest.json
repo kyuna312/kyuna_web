@@ -1,0 +1,77 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/jyiMfKGB2oFJWsGxe3i2v/_buildManifest.js",
+    "static/jyiMfKGB2oFJWsGxe3i2v/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/925-395da90c440d36f0.js",
+      "static/chunks/pages/index-59d99246d30d49ab.js"
+    ],
+    "/404": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/404-626810816fe0d7c1.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/_app-dbd410afdb1ae75f.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/_error-ee5b5fb91d29d86f.js"
+    ],
+    "/works": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/925-395da90c440d36f0.js",
+      "static/chunks/pages/works-b1012760de2ffb3b.js"
+    ],
+    "/works/madokareact": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/works/madokareact-364dc0fd78ab18f2.js"
+    ],
+    "/works/mongolnet": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/works/mongolnet-5dfe5221496dde59.js"
+    ],
+    "/works/nomadx": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/works/nomadx-f1bb1e39cdaf0219.js"
+    ],
+    "/works/nyanmarkdown": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/works/nyanmarkdown-c1df40030fc39fd3.js"
+    ],
+    "/works/nyanvim": [
+      "static/chunks/webpack-cf6f4da8ecb45be4.js",
+      "static/chunks/framework-0c7baedefba6b077.js",
+      "static/chunks/main-959f6b95aa5205a7.js",
+      "static/chunks/pages/works/nyanvim-a89da997be4e2f04.js"
+    ]
+  },
+  "ampFirstPages": []
+}
