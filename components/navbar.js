@@ -20,16 +20,24 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('whiteAlpha.900', 'whiteAlpha.900')
+  const activeColor = useColorModeValue('grassTeal', 'whiteAlpha.500')
+  const activeBgColor = useColorModeValue('grassTeal', 'transparent')
+  const inactiveBgColor = useColorModeValue('transparent', 'transparent')
+  const activeStyle = active ? { filter: 'blur(0.05px)' } : {}
+
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      bg={active ? activeBgColor : inactiveBgColor}
+      color={active ? activeColor : inactiveColor}
       target={target}
+      style={activeStyle}
+      _hover={{ color: activeColor }} // Add this line to change text color on hover
+      ml={2} // Add this line to move the Link text a little bit to the right
       {...props}
     >
       {children}
@@ -57,13 +65,13 @@ const Navbar = props => {
       <Container
         display="flex"
         p={2}
-        maxW="container.lg"
+        maxW="container.md"
         wrap="wrap"
         align="start"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+        <Flex align="center">
+          <Heading as="h1" size="md" letterSpacing={'tighter'} fontWeight="bold">
             <Logo />
           </Heading>
         </Flex>
@@ -73,7 +81,6 @@ const Navbar = props => {
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
-          flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
@@ -92,12 +99,10 @@ const Navbar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
-
+        <Box flex={1} align='right' mr={{ base: 'auto', md: 'auto' , sm: 'auto' }}>
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -116,11 +121,8 @@ const Navbar = props => {
                 <MenuItem as={MenuLink} href="/cv">
                   Cv
                 </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/kyuna312"
-                >
-                  View Source
+                <MenuItem as={Link} href="https://github.com/kyuna312">
+                  GitHub
                 </MenuItem>
               </MenuList>
             </Menu>

@@ -1,7 +1,8 @@
-import Link from 'next/link'
-import { Text, useColorModeValue } from '@chakra-ui/react'
-import DarkGirlIcon from './icons/darkgirl_icon'
-import styled from '@emotion/styled'
+import React from 'react';
+import Link from 'next/link';
+import styled from '@emotion/styled';
+import Image from 'next/image';
+import DarkGirlIcon from './icons/darkgirl_icon';
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -12,32 +13,32 @@ const LogoBox = styled.span`
   line-height: 20px;
   gap: 10px;
   padding: 20px;
+  border-radius: 50px;
+  background-color: pink.200;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: pink.300;
+  }
 
   > svg {
-    transition: 200ms ease;
+    transition: transform 0.3s ease;
   }
 
   &:hover > svg {
-    transform: rotate(20deg);
+    transform: rotate(20deg) scale(1.2);
   }
-`
+`;
 
-const Logo = () => {
+const Logo = React.memo(() => {
   return (
-    <Link href="/" scroll={false}>
+    <Link href="/">
       <LogoBox>
         <DarkGirlIcon />
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily='M PLUS Rounded 1c", sans-serif'
-          fontWeight="bold"
-          ml={3}
-        >
-          Amane Marin
-        </Text>
+        <Image src="/images/真夜_.png" width={50} height={200} alt="Picture of the author" />
       </LogoBox>
     </Link>
   );
-}
+});
 
-export default Logo
+export default Logo;

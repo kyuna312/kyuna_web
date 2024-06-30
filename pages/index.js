@@ -21,7 +21,7 @@ const Home = () => (
   <Layout>
     <Container>
       <Box
-        borderRadius="lg"
+        borderRadius="md"
         mb={6}
         p={3}
         textAlign="center"

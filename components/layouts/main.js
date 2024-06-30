@@ -17,17 +17,15 @@ const Main = ({ children, router }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@m1or3n" />
         <meta name="twitter:creator" content="@m1or3n" />
-        {/* <meta name="twitter:image" content="https://www.craftz.dog/card.png" /> */}
-        <meta property="og:site_name" content="Amane Marin" />
-        <meta name="og:title" content="Amane Marin" />
+        <meta property="og:site_name" content="Kyuna" />
+        <meta name="og:title" content="Kyuna" />
         <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="https://www.craftz.dog/card.png" /> */}
-        <title>Amane Marin - Homepage</title>
+        <title>Kyuna - Homepage</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.lg" pt={14}>
+      <Container maxW="container.md" >
         {children}
         <Footer />
       </Container>
