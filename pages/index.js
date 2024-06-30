@@ -10,33 +10,34 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import Image from 'next/image';
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import Image from 'next/image'
 
 const Home = () => (
   <Layout>
-    <Container>
+    <Container paddingTop={20} >
       <Box
         borderRadius="md"
         mb={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
+        bg={useColorModeValue('transparent', 'transparent')}
+        css={{ backdropFilter: 'blur(100px)' }}
       >
-        Hello, I&apos;m an linux developer based in Mongolia!
+        Kernel Enjoyer
       </Box>
-
+  
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Amane Marin
+          <Heading as="h2" variant="page-title" >
+            <Box>
+              <Image src="/images/真夜_.png" width={70} height={70} alt="Picture of the author" />
+  
+            </Box>
           </Heading>
-          <p>Kernel Enjoyer Geek ( Developer / Designer / Anime Fan )</p>
+          <p>Kernel Enjoyer Geek (Developer / Designer / Anime Fan)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -57,25 +58,24 @@ const Home = () => (
             <Image
               src="/images/amane.jpg"
               alt="Profile image"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
             />
           </Box>
         </Box>
       </Box>
-
+  
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <Paragraph>
-          Amane is a full-stack developer based in Ulaanbaatar with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-        </Paragraph>
+        <p>
+          Amane is a full-stack developer based in Ulaanbaatar with a passion for
+          building digital services/stuff he wants. He has a knack for all things
+          launching products, from planning and designing all the way to solving
+          real-life problems with code. When not online, he loves hanging out with
+          his camera. Currently, he is living off of his own product called{' '}
+        </p>
         <Box align="center" my={4}>
           <Button
             as={NextLink}
@@ -88,56 +88,69 @@ const Home = () => (
           </Button>
         </Box>
       </Section>
-
+  
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
-          <BioYear>2000</BioYear>
-          Born in Ulaanbaatar, Mongolia.
-        </BioSection>
-        <BioSection>
-          <BioYear>2021</BioYear>
-          Completed the Bachelor&apos;s Program in the Graduate Mongolian 
-          University of Science and Technology.
-        </BioSection>
-        <BioSection>
-          <BioYear>2019</BioYear>
-          Worked at Able Soft as intern and developer.
-        </BioSection>
-        <BioSection>
-          <BioYear>2021</BioYear>
-          Worked at Sod Mongol LLC
-        </BioSection>
-        <BioSection>
-          <BioYear>2023 to present</BioYear>
-          Working as Next Social Platform LLC
-        </BioSection>
-      </Section> 
-
+        <List
+          textAlign="justify"
+  
+          css={{
+            backdropFilter: 'blur(10px)',
+            marginTop: '1rem',
+            backdropFilter: 'blur(10px)' 
+          }}
+        >
+          <ListItem>
+            <strong>2000:</strong> Born in Ulaanbaatar, Mongolia.
+          </ListItem>
+          <ListItem>
+            <strong>2021:</strong> Completed the Bachelor&apos;s Program in the
+            Graduate Mongolian University of Science and Technology.
+          </ListItem>
+          <ListItem>
+            <strong>2019:</strong> Worked at Able Soft as an intern and developer.
+          </ListItem>
+          <ListItem>
+            <strong>2021:</strong> Worked at Sod Mongol LLC.
+          </ListItem>
+          <ListItem>
+            <strong>2023 to present:</strong> Working at Next Social Platform LLC.
+          </ListItem>
+        </List>
+      </Section>
+  
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+        <Heading  variant="section-title">
           Social Network
         </Heading>
-        <List>
+        <List           
+          textAlign="center"
+          css={{
+            backdropFilter: 'blur(10px)',
+            marginTop: '1rem',
+            backdropFilter: 'blur(10px)' 
+          }}
+        >
           <ListItem>
             <Link href="https://github.com/kyuna312" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
+                css={{ backdropFilter: 'blur(10px)' }}
                 leftIcon={<IoLogoGithub />}
               >
                 @maririn312
               </Button>
             </Link>
           </ListItem>
-          
           <ListItem>
             <Link href="https://twitter.com/m1or3n" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
+                css={{ backdropFilter: 'blur(10px)' }}
                 leftIcon={<IoLogoTwitter />}
               >
                 @m1or3n
@@ -149,6 +162,7 @@ const Home = () => (
               <Button
                 variant="ghost"
                 colorScheme="teal"
+                css={{ backdropFilter: 'blur(10px)' }}
                 leftIcon={<IoLogoInstagram />}
               >
                 @m1or3n
@@ -159,7 +173,7 @@ const Home = () => (
       </Section>
     </Container>
   </Layout>
-)
-
-export default Home
-export { getServerSideProps } from '../components/chakra'
+  )
+  
+  export default Home
+  export { getServerSideProps } from '../components/chakra'

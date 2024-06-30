@@ -6,7 +6,7 @@ import nomadx from '../public/images/works/nomadx.png';
 
 const Cv = () => (
   <Layout title="Posts">
-    <Container>
+    <Container paddingTop={20}>
       <Heading as="h3" fontSize={20} mb={4}>
         CV
       </Heading>
