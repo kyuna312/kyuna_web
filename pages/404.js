@@ -1,26 +1,38 @@
-import NextLink from 'next/link'
+import NextLink from 'next/link';
 import {
+  Image,
   Box,
-  Heading,
-  Text,
   Container,
-  Divider,
   Button
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 const NotFound = () => {
   return (
     <Container>
-      <Heading as="h1">Not found</Heading>
-      <Text>The page you&apos;re looking for was not found.</Text>
-      <Divider my={6} />
-      <Box my={6} align="center">
-        <Button as={NextLink} href="/" colorScheme="teal">
-          Return to home
-        </Button>
+      <Box
+        textAlign="center"
+        style={{
+          background: '#222222',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          fontFamily: 'Trebuchet MS, sans-serif',
+          padding: '10% 10% 10% 10%'
+        }}
+      >
+        {/* <Heading as="h1">Not found</Heading> */}
+
+        <Image src="https://c.tenor.com/Kun2CvljnYAAAAAC/error.gif" alt="Animated GIF" />
+
+        <Box my={6}>
+          <Button as={NextLink} href="/" colorScheme="teal">
+            Return to home
+          </Button>
+        </Box>
       </Box>
     </Container>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

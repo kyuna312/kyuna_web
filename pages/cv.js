@@ -2,41 +2,29 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import nomadx from '../public/images/works/nomadx.png';
+import nomadx from './../public/images/maya.png';
 
 const Cv = () => (
   <Layout title="Posts">
-    <Container paddingTop={20}>
+    <Container paddingTop={20} paddingBottom={250}>
       <Heading as="h3" fontSize={20} mb={4}>
         CV
       </Heading>
 
       <Section delay={0.1}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+        <SimpleGrid columns={[1, 2]} gap={12}>
           <GridItem
-            title="How to build a portfolio website"
+            title="CV English"
             thumbnail={nomadx}
             // thumbnail={thumbPortfolio}
-            href="https://www.youtube.com/watch?v=bSMZgXzC9AA"
+            href="https://docs.google.com/document/d/1HxRlAZ_ke7MAcVHUZsoveZC9YBuvOICW35y-HDiDIgY/edit?usp=sharing"
           />
           <GridItem
-            title="How to take notes in Markdown efficiently with Inkdrop"
+            title="Cv Japanese"
             thumbnail={nomadx}
             // thumbnail={thumbHowToUseInkdrop}
-            href="https://www.youtube.com/watch?v=-qBavwqc_mY"
-          />
-          <GridItem
-            title="My Fish workflow"
-            thumbnail={nomadx}
-            // thumbnail={thumbFishWorkflow}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
-          />
-          <GridItem
-            title="My desk setup (Late 2020)"
-            // thumbnail={thumbMyDeskSetup}
-            thumbnail={nomadx}
-            href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
-          />
+            href="https://docs.google.com/document/d/1ybedNLUPpoqChfSpAtpVON3wS40RiynG/edit?usp=sharing&ouid=103606792688552098181&rtpof=true&sd=true"
+          /> 
         </SimpleGrid>
       </Section>
     </Container>
