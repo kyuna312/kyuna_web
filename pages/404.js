@@ -21,10 +21,7 @@ const NotFound = () => {
           padding: '10% 10% 10% 10%'
         }}
       >
-        {/* <Heading as="h1">Not found</Heading> */}
-
         <Image src="https://c.tenor.com/Kun2CvljnYAAAAAC/error.gif" alt="Animated GIF" />
-
         <Box my={6}>
           <Button as={NextLink} href="/" colorScheme="teal">
             Return to home

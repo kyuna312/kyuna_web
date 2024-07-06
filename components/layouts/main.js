@@ -3,31 +3,50 @@ import NavBar from '../navbar';
 import { Box, Container } from '@chakra-ui/react';
 import Footer from '../footer';
 
-const Main = ({ children, router }) => (
-  <Box as="main" pb={8}>
-    <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Kyuna's homepage" />
-      <meta name="author" content="Kyuna" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      <meta name="twitter:title" content="Kyuna" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@m1or3n" />
-      <meta name="twitter:creator" content="@m1or3n" />
-      <meta property="og:site_name" content="Kyuna" />
-      <meta name="og:title" content="Kyuna" />
-      <meta property="og:type" content="website" />
-      <title>Maya - Homepage</title>
-    </Head>
+const Main = ({ children, router }) => {
+  const meta = {
+    title: 'Miya',
+    description: "Miya's homepage",
+    author: 'Miya',
+    twitter: {
+      title: 'Miya',
+      card: 'summary_large_image',
+      site: '@m1or3n',
+      creator: '@m1or3n',
+    },
+    og: {
+      site_name: 'Miya',
+      title: 'Miya',
+      type: 'website',
+    },
+  };
 
-    <NavBar path={router.asPath} />
+  return (
+    <Box as="main" pb={8}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={meta.description} />
+        <meta name="author" content={meta.author} />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="twitter:title" content={meta.twitter.title} />
+        <meta name="twitter:card" content={meta.twitter.card} />
+        <meta name="twitter:site" content={meta.twitter.site} />
+        <meta name="twitter:creator" content={meta.twitter.creator} />
+        <meta property="og:site_name" content={meta.og.site_name} />
+        <meta name="og:title" content={meta.og.title} />
+        <meta property="og:type" content={meta.og.type} />
+        <title>{meta.title} - Homepage</title>
+      </Head>
 
-    <Container maxW="container.md">
-      {children}
-      <Footer />
-    </Container>
-  </Box>
-);
+      <NavBar path={router.asPath} />
+
+      <Container maxW="container.md">
+        {children}
+        <Footer />
+      </Container>
+    </Box>
+  );
+};
 
 export default Main;

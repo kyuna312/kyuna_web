@@ -13,7 +13,7 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -36,8 +36,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       color={active ? activeColor : inactiveColor}
       target={target}
       style={activeStyle}
-      _hover={{ color: activeColor }} // Add this line to change text color on hover
-      ml={2} // Add this line to move the Link text a little bit to the right
+      _hover={{ color: activeColor }} 
+      ml={2} 
       {...props}
     >
       {children}
@@ -83,11 +83,8 @@ const Navbar = props => {
           alignItems="center"
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          <LinkItem href="/cv" path={path}>
-            CV
+          <LinkItem href="/projects" path={path}>
+            Projects
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -102,26 +99,25 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align='right' mr={{ base: 'auto', md: 'auto' , sm: 'auto' }}>
+        <Box flex={1} align='right' background={'transparent'} style={{background: 'transparent', border: 'none'}} backdropBlur={10} mr={{ base: 'auto', md: 'auto' , sm: 'auto' }}>
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
+            <Menu isLazy colorScheme='pink' width='50'>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList>
-                <MenuItem as={MenuLink} href="/">
+              <MenuList  minWidth='80px' 
+                style={{ backdropFilter: 'blur(30px)', width:50, border: 'none', background: 'transparent',  WebkitBackdropFilter: 'blur(10px)', marginBottom: '1.45rem', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)' }}
+              >
+                <MenuItem backdropBlur={10} background={'transparent'} as={MenuLink} href="/">
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Works
+                <MenuItem backdropBlur={10} background={'transparent'} as={MenuLink} href="/projects">
+                  Projects
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/cv">
-                  Cv
-                </MenuItem>
-                <MenuItem as={Link} href="https://github.com/kyuna312">
+                <MenuItem backdropBlur={10} background={'transparent'} as={Link} href="https://github.com/kyuna312">
                   GitHub
                 </MenuItem>
               </MenuList>

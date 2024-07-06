@@ -8,7 +8,7 @@ const variants = {
 };
 
 const Layout = ({ children, title }) => {
-  const t = `${title} - Kyuna`;
+  const t = `${title} - Miya`;
   return (
     <motion.article
       initial="hidden"
@@ -17,6 +17,7 @@ const Layout = ({ children, title }) => {
       variants={variants}
       transition={{ duration: 0.4, type: 'easeInOut' }}
       style={{ position: 'relative' }}
+      color='#fe80a0'
     >
       {title && (
         <Head>

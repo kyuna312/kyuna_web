@@ -42,7 +42,7 @@ const Footer = () => {
         </Box>
       </Flex>
       <Box fontSize="sm" opacity={0.6} mt={2}>
-        Made with ❤️ by 真夜(Maya)
+        Made with ❤️ by 深夜(Miya)
       </Box>
     </Flex>
   );

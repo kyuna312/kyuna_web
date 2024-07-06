@@ -1,7 +1,7 @@
 {
-  "name": "marin_portofolia_homepage",
+  "name": "miya_portofolia_homepage",
   "version": "0.0.1",
-  "description": "Amane Marin's website",
+  "description": "Miya's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Amane Maririn",
+  "author": "Miiya",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
