@@ -21,7 +21,7 @@ const Home = () => (
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             <Box>
-              <Image src="/images/真夜_.png" width={70} height={70} alt="Picture of the author" />
+              <Image src="/images/霜花.png" width={70} height={70} alt="Picture of the author" />
             </Box>
           </Heading>
           <p>Kernel Enjoyer Geek (Developer / Designer / Anime Fan)</p>
@@ -59,7 +59,7 @@ const Home = () => (
         </Heading>
         <Box marginLeft={4}>
           <p>
-            Miya is a full-stack developer based in Ulaanbaatar with a passion for building digital services. They excel at launching products, from planning and designing to solving real-life problems with code. With 5 years of experience in mobile and web development, starting from their third year at university, Maaya brings a wealth of expertise to their projects. In addition to development, they have an admiration for reverse engineering and exploit development, and they are interested in building their own operating system. When not online, Maaya loves watching and reading anime, manga, and light novels, and occasionally doing cosplay. Currently, they are living off of their own product.{' '}
+            Kyuna is a full-stack developer based in Ulaanbaatar with a passion for building digital services. They excel at launching products, from planning and designing to solving real-life problems with code. With 5 years of experience in mobile and web development, starting from their third year at university, Maaya brings a wealth of expertise to their projects. In addition to development, they have an admiration for reverse engineering and exploit development, and they are interested in building their own operating system. When not online, Maaya loves watching and reading anime, manga, and light novels, and occasionally doing cosplay. Currently, they are living off of their own product.{' '}
           </p>
         </Box>
         <Box align="center" my={4}>

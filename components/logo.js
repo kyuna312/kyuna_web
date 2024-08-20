@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import DarkGirlIcon from './icons/darkgirl_icon';
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -34,8 +33,7 @@ const Logo = React.memo(() => {
   return (
     <Link href="/">
       <LogoBox>
-        <DarkGirlIcon />
-        <Image src="/images/真夜_.png" width={50} height={200} alt="Picture of the author" />
+        <Image src="/images/霜花.png" width={50} height={100} alt="Picture of the author" />
       </LogoBox>
     </Link>
   );

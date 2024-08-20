@@ -1,7 +1,7 @@
 {
-  "name": "miya_portofolia_homepage",
+  "name": "Kyuna_portofolia_homepage",
   "version": "0.0.1",
-  "description": "Miya's website",
+  "description": "Kyuna's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
