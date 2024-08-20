@@ -18,24 +18,24 @@ const Projects = () => (
 
 			<SimpleGrid columns={[ 1, 1, 2 ]} gap={6}>
 				<Section>
-					<ProjectGridItem id="NomadX" title="NomadX" thumbnail={nomadx} url={'https://nomadx.world'} >
+					<ProjectGridItem id="NomadX" title="NomadX" thumbnail={nomadx} url='https://nomadx.world' >
 						Mongolian NFT Market Place Web Application and Mobile Application
 					</ProjectGridItem>					
 				</Section>
 				<Section>
-					<ProjectGridItem id="mongolnet" title="mongolnet" thumbnail={mongolnet} url={'https://mongol.net'}>
+					<ProjectGridItem id="mongolnet" title="mongolnet" thumbnail={mongolnet} url='https://mongol.net'>
 						I developed a National Social Network Platform called Mongol.net using React with Vite, Tailwind
 						CSS, NestJS, Flutter , and GraphQL. If you have any specific inquiries or would like more
 						information about this project
 					</ProjectGridItem>
 				</Section>
 				<Section>
-					<ProjectGridItem id="NyanMarkDown " title="NyanMarkDown " thumbnail={nyanmarkdown} url={'https://github.com/kyuna312/NyanVim'}>
+					<ProjectGridItem id="NyanMarkDown " title="NyanMarkDown " thumbnail={nyanmarkdown} url='https://github.com/kyuna312/NyanVim'>
 						NyanMarkDown Custom Mark Down Editor{' '}
 					</ProjectGridItem>
 				</Section>
 				<Section>
-					<ProjectGridItem id="madoka_react " title="madoka_react " thumbnail={madoka_react} url={'https://madoka-react-git-main-kyuna-projects.vercel.app/'}>
+					<ProjectGridItem id="madoka_react " title="madoka_react " thumbnail={madoka_react} url='https://madoka-react-git-main-kyuna-projects.vercel.app/'>
 						My Custom React JS Vite Based SASS animated web
 					</ProjectGridItem>
 				</Section>
