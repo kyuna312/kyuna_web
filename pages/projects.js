@@ -35,7 +35,7 @@ const Projects = () => (
 					</ProjectGridItem>
 				</Section>
 				<Section>
-					<ProjectGridItem id="madoka_react " title="madoka_react " thumbnail={madoka_react} url='https://madoka-react-git-main-kyuna-projects.vercel.app/'>
+					<ProjectGridItem id="madoka_react " title="madoka_react " thumbnail={madoka_react} url='https://madoka-kappa.vercel.app'>
 						My Custom React JS Vite Based SASS animated web
 					</ProjectGridItem>
 				</Section>
