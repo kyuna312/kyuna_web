@@ -24,7 +24,7 @@ const NotFound = () => {
         <Image src="https://c.tenor.com/Kun2CvljnYAAAAAC/error.gif" alt="Animated GIF" />
         <Box my={6}>
           <Button as={NextLink} href="/" colorScheme="teal">
-            Return to home
+            ホームに戻る
           </Button>
         </Box>
       </Box>

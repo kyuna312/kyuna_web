@@ -55,11 +55,12 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work Experience
+          職務経歴
         </Heading>
         <Box marginLeft={4}>
           <p>
-            Kyuna is a full-stack developer based in Ulaanbaatar with a passion for building digital services. They excel at launching products, from planning and designing to solving real-life problems with code. With 5 years of experience in mobile and web development, starting from their third year at university, Maaya brings a wealth of expertise to their projects. In addition to development, they have an admiration for reverse engineering and exploit development, and they are interested in building their own operating system. When not online, Maaya loves watching and reading anime, manga, and light novels, and occasionally doing cosplay. Currently, they are living off of their own product.{' '}
+          　ハタンズリグはウランバートルを拠点とするフルスタック開発者で、デジタルサービスの構築に情熱を持っています。プロダクトの計画からデザイン、そしてコードを使った実際の問題解決まで、全てにおいて優れた能力を発揮します。大学3年次から始めたモバイルおよびウェブ開発で、5年の経験を積み重ね、プロジェクトに豊富な専門知識をもたらしています。
+            また、開発だけでなく、リバースエンジニアリングやエクスプロイト開発にも深い興味を持ち、自分自身のオペレーティングシステムを構築することを目指しています。オフラインの時間には、アニメやマンガ、ライトノベルを視聴・読書したり、時にはコスプレを楽しんだりしています。現在は、自身のプロダクトで生計を立てています.{' '}
           </p>
         </Box>
         <Box align="center" my={4}>
@@ -73,14 +74,14 @@ const Home = () => (
             _hover={{ transform: 'scale(1.05)' }}
             style={{ backdropFilter: 'blur(5px)', background: 'rgba(0, 0, 0, 0.5)',  color: 'white' , boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)'}}
           >
-            Worked Projects
+            担当したプロジェクト
           </Button>
         </Box>
       </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Biography
+          経歴
         </Heading>
         <List
           textAlign="justify"
@@ -91,19 +92,19 @@ const Home = () => (
           }}
         >
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2000:</strong> Born in Ulaanbaatar, Mongolia.
+            <strong>2000年:</strong> モンゴル国ウランバートルに生まれる。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2021:</strong> Completed the Bachelor&apos;s Program in the Graduate Mongolian University of Science and Technology.
+            <strong>2021年:</strong> モンゴル国立科学技術大学の学士課程を修了。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2019:</strong> Worked at Able Soft as an intern and developer.
+            <strong>2019年:</strong> Able Softでインターンシップと開発者として働く。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2021:</strong> Worked at Sod Mongol LLC.
+            <strong>2021年:</strong> Sod Mongol LLCで勤務。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2023 to present:</strong> Working at Next Social Platform LLC.
+            <strong>2023年から現在:</strong> Next Social Platform LLCで勤務中。
           </ListItem>
         </List>
       </Section>
@@ -169,7 +170,7 @@ const Home = () => (
             _hover={{ transform: 'scale(1.05)' }}
             style={{ backdropFilter: 'blur(5px)', background: 'rgba(0, 0, 0, 0.5)',  color: 'white' , boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)'}}
           >
-            RESUME
+            履歴書
           </Button>
         </Box>
       </Section>
