@@ -1,6 +1,6 @@
-# Marin's Homepage
+# Kyuna's Homepage
 
-[https://www.maririn.ml/](https://www.maririn.ml/)
+[https://kyuna-web.vercel.app](https://kyuna-web.vercel.app)
 
 ## Stack
 
