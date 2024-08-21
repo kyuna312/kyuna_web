@@ -1,4 +1,3 @@
-// _app.js or _app.tsx
 import { appWithTranslation } from 'next-i18next';
 import Chakra from '../components/chakra';
 import Fonts from '../components/fonts';
