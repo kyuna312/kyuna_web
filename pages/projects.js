@@ -2,7 +2,6 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
 import { ProjectGridItem} from '../components/grid-item';
-import { useTranslation } from 'react-i18next';
 
 import nomadx from '../public/images/works/nomadx.png';
 import mongolnet from '../public/images/works/mongolnet.png';
@@ -11,8 +10,6 @@ import madoka_react from '../public/images/works/madoka_react.png';
 import nyanvim from '../public/images/works/nyanvim.png';
 
 const Projects = () => {
-	const { t } = useTranslation('common');
-	
 	return (
 		<Layout title="Projects">
 			<Container paddingTop={20}>
