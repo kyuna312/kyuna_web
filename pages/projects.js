@@ -23,29 +23,27 @@ const Projects = () => {
 				<SimpleGrid columns={[ 1, 1, 2 ]} gap={6}>
 					<Section>
 						<ProjectGridItem id="NomadX" title="NomadX" thumbnail={nomadx} url='https://nomadx.world' >
-							Mongolian NFT Market Place Web Application and Mobile Application
+              {t('projects.NomadXDescription')}
 						</ProjectGridItem>					
 					</Section>
 					<Section>
 						<ProjectGridItem id="mongolnet" title="mongolnet" thumbnail={mongolnet} url='https://mongol.net'>
-							I developed a National Social Network Platform called Mongol.net using React with Vite, Tailwind
-							CSS, NestJS, Flutter , and GraphQL. If you have any specific inquiries or would like more
-							information about this project
+							{t('projects.mongolnetDescription')}
 						</ProjectGridItem>
 					</Section>
 					<Section>
 						<ProjectGridItem id="NyanMarkDown " title="NyanMarkDown " thumbnail={nyanmarkdown} url='https://github.com/kyuna312/NyanVim'>
-							NyanMarkDown Custom Mark Down Editor{' '}
+              {t('projects.NyanMarkDownDescription')}
 						</ProjectGridItem>
 					</Section>
 					<Section>
 						<ProjectGridItem id="madoka_react " title="madoka_react " thumbnail={madoka_react} url='https://madoka-kappa.vercel.app'>
-							My Custom React JS Vite Based SASS animated web
+              {t('projects.madoka_reactDescription')}
 						</ProjectGridItem>
 					</Section>
 					<Section delay={0.1}>
 						<ProjectGridItem id="nyanvim" title="nyanvim" thumbnail={nyanvim}>
-							my custom neo vim project
+              {t('projects.nyanvimDescription')}
 						</ProjectGridItem>
 					</Section>
 				</SimpleGrid>

@@ -1,16 +1,20 @@
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { locale, push, pathname, asPath } = useRouter();
 
-  const handleLanguageChange = (lng) => {
-    i18n.changeLanguage(lng); // Change the language using i18n
+  const changeLanguage = (lang) => {
+    push(pathname, asPath, { locale: lang });
   };
 
   return (
     <div>
-      <button onClick={() => handleLanguageChange('en')}>English</button>
-      <button onClick={() => handleLanguageChange('ja')}>Japanese</button>
+      <button onClick={() => changeLanguage('en')} disabled={locale === 'en'}>
+        {`English`}
+      </button>
+      <button onClick={() => changeLanguage('ja')} disabled={locale === 'ja'}>
+        {`日本語`}
+      </button>
     </div>
   );
 };

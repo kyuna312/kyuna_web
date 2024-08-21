@@ -1,8 +1,17 @@
 {
   "projects": {
     "title": "Projects",
-    "description": "Here are some of the projects I've worked on."
-  },
+    "NomadX": "NomadX",
+    "NomadXDescription": "Mongolian NFT Market Place Web Application and Mobile Application",
+    "mongolnet": "mongolnet",
+    "mongolnetDescription": "I developed a National Social Network Platform called Mongol.net using React with Vite, Tailwind CSS, NestJS, Flutter, and GraphQL. If you have any specific inquiries or would like more information about this project",
+    "NyanMarkDown": "NyanMarkDown",
+    "NyanMarkDownDescription": "NyanMarkDown Custom Markdown Editor",
+    "madoka_react": "madoka_react",
+    "madoka_reactDescription": "My Custom React JS Vite Based SASS animated web",
+    "nyanvim": "nyanvim",
+    "nyanvimDescription": "My custom NeoVim project"
+  }, 
   "footer": {
     "contact": "Contact",
     "about": "About"

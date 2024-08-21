@@ -13,7 +13,7 @@ import {
 	MenuList,
 	MenuButton,
 	IconButton,
-	useColorModeValue
+	useColorModeValue 
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { IoLogoGithub } from 'react-icons/io5';

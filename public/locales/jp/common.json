@@ -1,8 +1,17 @@
 {
   "projects": {
     "title": "プロジェクト",
-    "description": "私が関わったプロジェクトのいくつかをご紹介します。"
-  },
+    "NomadX": "NomadX",
+    "NomadXDescription": "モンゴルのNFTマーケットプレイスWebアプリケーションおよびモバイルアプリケーション",
+    "mongolnet": "mongolnet",
+    "mongolnetDescription": "React、Vite、Tailwind CSS、NestJS、Flutter、GraphQLを使用してMongol.netという国立ソーシャルネットワークプラットフォームを開発しました。このプロジェクトに関する具体的な問い合わせや詳細については、お問い合わせください。",
+    "NyanMarkDown": "NyanMarkDown",
+    "NyanMarkDownDescription": "NyanMarkDownカスタムMarkdownエディタ",
+    "madoka_react": "madoka_react",
+    "madoka_reactDescription": "私のカスタムReact JS ViteベースのSASSアニメーションウェブ",
+    "nyanvim": "nyanvim",
+    "nyanvimDescription": "私のカスタムNeoVimプロジェクト"
+  }, 
   "footer": {
     "contact": "お問い合わせ",
     "about": "概要"
