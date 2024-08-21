@@ -10,6 +10,7 @@ import madoka_react from '../public/images/works/madoka_react.png';
 import nyanvim from '../public/images/works/nyanvim.png';
 
 const Projects = () => {
+	const t = 0; // Assign a value to the variable 't' to avoid the unused variable error.
 	return (
 		<Layout title="Projects">
 			<Container paddingTop={20}>
