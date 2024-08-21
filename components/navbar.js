@@ -17,6 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { IoLogoGithub } from 'react-icons/io5';
+import LanguageSwitcher from './languageSwitcher';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
 	const active = path === href;
@@ -88,6 +89,7 @@ const Navbar = (props) => {
           >
             <IoLogoGithub />
           </LinkItem>
+          <LanguageSwitcher />
         </Stack>
 
         <Box
