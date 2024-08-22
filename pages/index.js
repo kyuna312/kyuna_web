@@ -92,19 +92,19 @@ const Home = () => (
           }}
         >
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2000年:</strong> モンゴル国ウランバートルに生まれる。
+            <strong>2000年:</strong> モンゴル国ウランバートルに生まれました。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2021年:</strong> モンゴル国立科学技術大学の学士課程を修了。
+            <strong>2019年:</strong> Able Softでインターンシップを行い、開発者として勤務しました。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2019年:</strong> Able Softでインターンシップと開発者として働く。
+            <strong>2021年:</strong> モンゴル国立科学技術大学の学士課程を修了し、Sod Mongol LLCで勤務を開始しました。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2021年:</strong> Sod Mongol LLCで勤務。
+            <strong>2022年12月:</strong> Sod Mongol LLCでの勤務を終了しました。
           </ListItem>
           <ListItem css={{ marginBottom: '0.5rem' }}>
-            <strong>2023年から現在:</strong> Next Social Platform LLCで勤務中。
+            <strong>2023年1月から現在:</strong> Next Social Platform LLCで勤務しています。
           </ListItem>
         </List>
       </Section>
