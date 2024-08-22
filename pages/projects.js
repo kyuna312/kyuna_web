@@ -39,7 +39,7 @@ const Projects = () => {
 						</ProjectGridItem>
 					</Section>
 					<Section delay={0.1}>
-						<ProjectGridItem id="nyanvim" title="nyanvim" thumbnail={nyanvim}>
+						<ProjectGridItem id="nyanvim" title="nyanvim" thumbnail={nyanvim} url='https://github.com/kyuna312/NyanVim'>
 						  私のカスタムNeoVimプロジェクト
 						</ProjectGridItem>
 					</Section>
