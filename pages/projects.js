@@ -19,7 +19,7 @@ const Projects = () => {
 				<SimpleGrid columns={[ 1, 1, 2 ]} gap={6}>
 					<Section>
 						<ProjectGridItem id="NomadX" title="NomadX" thumbnail={nomadx} url='https://nomadx.world' >
-		                                  NomadxはNFTマーケットプレイスで、WebアプリではReact、Vite、Tailwindを活用してフロントエンドを開発しました。モバイルアプリにはFlutterを採用し、快適なユーザー体験を提供しました。本プロジェクトでは、フロントエンドおよびモバイル開発者として携わりました。
+		                                    NomadxはNFTマーケットプレイスであり、Webアプリのフロントエンド開発にはReact、Vite、Tailwindを活用しました。モバイルアプリにはFlutterを採用し、快適なユーザー体験を提供しました。本プロジェクトでは、フロントエンドおよびモバイル開発者として携わりました。
 						</ProjectGridItem>					
 					</Section>
 					<Section>
