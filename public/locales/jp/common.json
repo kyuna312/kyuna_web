@@ -19,6 +19,8 @@
     "nyanvimDescription": "小さく速いNeovimセットアップ。IDE機能をそのまま、起動は約30ms、ライブテーマ切り替え、既存の設定を触らずに試せるインストーラ付き。約1,200行のLua、プラグインごとに1ファイル。",
     "nyanphotos": "NyanPhotos",
     "nyanphotosDescription": "Apple Photosライブラリを写真の中身で整理するmacOSアプリ。スクリーンショット、書類、アニメ絵、小さい・低解像度のファイル、重複や連写を見つける。ラベルはすべてオンデバイスのVisionと画像埋め込みから生まれ、Macの外へは何も出ない。Photosへの変更は必ずレビューシートで確認してから行う。",
+    "contextforge": "context_forge",
+    "contextforgeDescription": "Claude Code のコンテキストを小さく保つプラグイン。コンテキスト使用率と CLAUDE.md のトークン推定を表示するステータスライン、指示ファイルが600語を超えると警告するセッション開始フック、さらに削減するための11のスキル（うち6つは Codex と Gemini CLI でも動作）。",
     "kitvcs": "kit-vcs",
     "kitvcsDescription": "オブジェクトストレージ、コミット、ブランチ、CLI設計を探るためにC++で作ったGit風バージョン管理システム。",
     "NomadX": "NomadX",
