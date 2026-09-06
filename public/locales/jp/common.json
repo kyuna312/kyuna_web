@@ -1,7 +1,7 @@
 {
   "skipToContent": "本文へスキップ",
   "seo": {
-    "defaultDescription": "ウランバートル拠点の独立系フルスタックデベロッパー。React、TypeScript、Node.js、NestJS、Flutter、Javaでウェブ・モバイル・開発ツール・フィンテック・ソーシャルプラットフォームのプロダクトを作っています。"
+    "defaultDescription": "ウランバートル拠点のソフトウェアエンジニア。開発者ツールとプロダクトを支えるシステムを作っています：NyanPhotos（macOS向けオンデバイス写真整理）、NyanVim、Hunnu Lang、そしてTypeScript・Rust・Swift・Goでのフルスタック開発。"
   },
   "navbar": {
     "contact": "お問い合わせ"
@@ -37,12 +37,12 @@
     }
   },
   "home": {
-    "pageTitle": "Kyuna — 独立系フルスタックデベロッパー",
+    "pageTitle": "Kyuna — ソフトウェアエンジニア（システム・開発者ツール）",
     "greeting": "こんにちは！Kyunaです — ウランバートル拠点の独立系デベロッパーです。",
     "title": "システムからインターフェイスまで、考え抜いたソフトウェアを作ります。",
-    "subtitle": "独立系デベロッパー · フルスタックエンジニア · デザイナー",
-    "description": "ウェブ、モバイル、開発ツール、フィンテック、ソーシャルプラットフォームのプロダクトを手がけて5年以上のフルスタックエンジニアです。要件定義と技術設計から実装、デプロイ、保守まで一貫して担当します。",
-    "availability": "フリーランス案件・プロダクト協業のご相談を受け付けています",
+    "subtitle": "ソフトウェアエンジニア · システム・開発者ツール · フルスタック",
+    "description": "ウェブ、モバイル、ネイティブで5年の経験を持つソフトウェアエンジニアです。開発者ツールとプロダクトを支えるシステムを作っています。最近作ったのは、Apple Photosライブラリをデバイス上で整理するmacOSアプリNyanPhotos。プライバシー・バイ・デフォルト、実行前のレビュー、深夜3時でも読めるコードを大切にしています。",
+    "availability": "ソフトウェアエンジニア職と選りすぐりのフリーランス案件を受け付けています",
     "location": "ウランバートル、モンゴル · 北緯47.92°",
     "frostFlower": "霜の花",
     "viewProjects": "プロジェクトを見る",
@@ -77,7 +77,7 @@
       "sodmongol": "Sod Mongol Groupでウェブ・モバイル・検索・バックエンドを開発し、フィンテックプロダクトNomadXに参加。",
       "mongolnet": "Next Social Platform ProvidersでMongol.netのフルスタックなウェブ・モバイル機能を開発。",
       "brexia": "Brexia Technologyで日本のエンジニアリング環境のもと、タブレット・モバイル・社内業務システムを開発。",
-      "now": "独立系デベロッパー／フリーランスエンジニアとして、ウェブとモバイルのプロダクトを一気通貫で提供中。"
+      "now": "NyanPhotos、NyanVim、Hunnu Langを開発中。ウランバートルでのソフトウェアエンジニア職、および日本・欧州・北米のチームとのリモート勤務に前向きです。"
     },
     "servicesLabel": "サービス",
     "servicesHeading": "お手伝いできること",

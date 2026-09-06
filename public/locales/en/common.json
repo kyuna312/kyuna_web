@@ -1,7 +1,7 @@
 {
   "skipToContent": "Skip to main content",
   "seo": {
-    "defaultDescription": "Independent full-stack developer in Ulaanbaatar building web, mobile, developer-tooling, fintech, and social-platform products with React, TypeScript, Node.js, NestJS, Flutter, and Java."
+    "defaultDescription": "Software engineer in Ulaanbaatar building developer tools and the systems behind products: NyanPhotos (on-device photo sorting for macOS), NyanVim, Hunnu Lang, and full-stack work in TypeScript, Rust, Swift and Go."
   },
   "navbar": {
     "contact": "Contact"
@@ -37,12 +37,12 @@
     }
   },
   "home": {
-    "pageTitle": "Kyuna — Independent Full-Stack Developer",
+    "pageTitle": "Kyuna — Software Engineer, Systems & Developer Tooling",
     "greeting": "Hello! I'm Kyuna — an independent developer from Ulaanbaatar.",
     "title": "I build thoughtful software from system to interface.",
-    "subtitle": "Independent Developer · Full-Stack Engineer · Designer",
-    "description": "I'm an independent developer and full-stack software engineer with 5+ years of experience building web, mobile, developer-tooling, fintech, and social-platform products. I take ideas from requirements and technical design through implementation, deployment, and maintenance.",
-    "availability": "Available for selected freelance and product collaborations",
+    "subtitle": "Software Engineer · Systems & Developer Tooling · Full-Stack",
+    "description": "I'm a software engineer with five years across web, mobile and native. I build developer tools and the systems behind products — most recently NyanPhotos, a macOS app that sorts an Apple Photos library on device — and I care about privacy by default, review before action, and code someone can read at 3 am.",
+    "availability": "Open to software engineering roles and selected freelance work",
     "location": "Ulaanbaatar, Mongolia · 47.92° N",
     "frostFlower": "frost flower",
     "viewProjects": "View projects",
@@ -77,7 +77,7 @@
       "sodmongol": "Built web, mobile, search, and backend capabilities at Sod Mongol Group; contributed to the NomadX fintech product.",
       "mongolnet": "Developed full-stack web and mobile features for Mongol.net at Next Social Platform Providers.",
       "brexia": "Worked in a Japanese engineering environment at Brexia Technology, developing tablet, mobile, and internal business software.",
-      "now": "Working as an Independent Developer and Freelance Software Engineer, delivering web and mobile products end to end."
+      "now": "Building NyanPhotos, NyanVim and Hunnu Lang; open to software engineering roles in Ulaanbaatar and remote work with teams in Japan, Europe or North America."
     },
     "servicesLabel": "Services",
     "servicesHeading": "How I can help",

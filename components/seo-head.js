@@ -9,7 +9,7 @@ import { site, locales } from '../lib/site'
 const SEOHead = ({
   title,
   description,
-  image = '/images/icon.png',
+  image = '/images/og.png',
   type = 'website',
   author = 'Kyuna'
 }) => {
@@ -44,8 +44,8 @@ const SEOHead = ({
       <meta key="og:site_name" property="og:site_name" content={siteTitle} />
       <meta key="og:locale" property="og:locale" content={locale.ogLocale} />
 
-      {/* Twitter — 'summary' card: the OG image is the square site icon, not a wide banner */}
-      <meta key="twitter:card" name="twitter:card" content="summary" />
+      {/* Twitter — large card: og.png is a 1200×630 banner (public/images/og.png) */}
+      <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
       <meta key="twitter:title" name="twitter:title" content={pageTitle} />
       <meta key="twitter:description" name="twitter:description" content={pageDescription} />
       <meta key="twitter:image" name="twitter:image" content={`${siteUrl}${image}`} />
