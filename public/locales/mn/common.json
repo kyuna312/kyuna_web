@@ -17,6 +17,8 @@
     "dotfilesDescription": "Автомат суулгалттай, shell, terminal, editor, Linux, macOS дамнасан нэгдсэн дизайн хэлтэй олон платформын хөгжүүлэлтийн орчин.",
     "nyanvim": "NyanVim",
     "nyanvimDescription": "Жижиг, хурдан Neovim тохиргоо: шууд IDE боломжууд, ~30 мс-д асдаг, шууд theme солигч, өөрийн тохиргоог хөндөлгүй туршиж үзэх суулгагчтай. Ойролцоогоор 1,200 мөр Lua, нэг plugin нэг файл.",
+    "nyanphotos": "NyanPhotos",
+    "nyanphotosDescription": "Apple Photos сангаа зургууд юу болохоороо ангилдаг macOS апп: screenshot, баримт, аниме зураг, жижиг ба бага нягтралтай файл, давхардал, burst. Шошго бүр on-device Vision ба embedding-ээс гарна, юу ч Mac-аас гадагш явахгүй, Photos-д хийх өөрчлөлт бүр эхлээд review sheet-ээр батлагдана.",
     "kitvcs": "kit-vcs",
     "kitvcsDescription": "Объект хадгалалт, commit, branch болон command-line хэрэгслийн дизайныг судлахаар C++ дээр бүтээсэн Git-ээс санаа авсан хувилбарын удирдлагын систем.",
     "NomadX": "NomadX",

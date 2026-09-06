@@ -17,6 +17,8 @@
     "dotfilesDescription": "自動インストールと、シェル・ターミナル・エディタ・Linux・macOSを貫く共通のデザイン言語を持つマルチプラットフォーム開発環境。",
     "nyanvim": "NyanVim",
     "nyanvimDescription": "小さく速いNeovimセットアップ。IDE機能をそのまま、起動は約30ms、ライブテーマ切り替え、既存の設定を触らずに試せるインストーラ付き。約1,200行のLua、プラグインごとに1ファイル。",
+    "nyanphotos": "NyanPhotos",
+    "nyanphotosDescription": "Apple Photosライブラリを写真の中身で整理するmacOSアプリ。スクリーンショット、書類、アニメ絵、小さい・低解像度のファイル、重複や連写を見つける。ラベルはすべてオンデバイスのVisionと画像埋め込みから生まれ、Macの外へは何も出ない。Photosへの変更は必ずレビューシートで確認してから行う。",
     "kitvcs": "kit-vcs",
     "kitvcsDescription": "オブジェクトストレージ、コミット、ブランチ、CLI設計を探るためにC++で作ったGit風バージョン管理システム。",
     "NomadX": "NomadX",

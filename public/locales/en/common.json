@@ -17,6 +17,8 @@
     "dotfilesDescription": "A multi-platform development environment with automated installation and a shared design language across shells, terminals, editors, Linux, and macOS.",
     "nyanvim": "NyanVim",
     "nyanvimDescription": "A small, fast Neovim setup: IDE features out of the box, ~30 ms startup, a live theme switcher, and a try-before-you-switch installer that leaves your own config untouched. About 1,200 lines of Lua, one plugin per file.",
+    "nyanphotos": "NyanPhotos",
+    "nyanphotosDescription": "A macOS app that sorts your Apple Photos library by what the pictures are: screenshots, documents, anime art, tiny or low-resolution files, duplicates and bursts. Every label comes from on-device Vision and image embeddings, nothing leaves the Mac, and every change goes through a review sheet before Photos is touched.",
     "kitvcs": "kit-vcs",
     "kitvcsDescription": "A Git-inspired version-control system built in C++ to explore object storage, commits, branches, and command-line tool design.",
     "NomadX": "NomadX",
