@@ -9,10 +9,10 @@ import {
   HStack,
   VStack,
   Button,
-  Container,
+  Container
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/page'
-import { site, socialLinks } from '../lib/site'
+import { socialLinks } from '../lib/site'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import nextI18NextConfig from '../next-i18next.config'
@@ -24,7 +24,7 @@ const MotionBox = motion.create(Box)
 const rise = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay, ease: 'easeOut' },
+  transition: { duration: 0.7, delay, ease: 'easeOut' }
 })
 
 // Sections render statically — the hero entrance is the page's one animated moment.
@@ -36,10 +36,26 @@ const resumeUrl =
 
 // Prose lives in the locale files under home.craft.<key>.
 const craft = [
-  { key: 'fullstack', tech: 'React · Next.js · TypeScript · Node.js · NestJS · Flutter', color: 'ice' },
-  { key: 'systems', tech: 'Rust · C/C++ · Lua · Neovim · Linux', color: 'gold' },
-  { key: 'backend', tech: 'Java Spring Boot · GraphQL · Elasticsearch · Docker · Kubernetes', color: 'bloom' },
-  { key: 'design', tech: 'Figma · Design systems · Responsive UI · Motion', color: 'ice' },
+  {
+    key: 'fullstack',
+    tech: 'React · Next.js · TypeScript · Node.js · NestJS · Flutter',
+    color: 'ice'
+  },
+  {
+    key: 'systems',
+    tech: 'Rust · C/C++ · Lua · Neovim · Linux',
+    color: 'gold'
+  },
+  {
+    key: 'backend',
+    tech: 'Java Spring Boot · GraphQL · Elasticsearch · Docker · Kubernetes',
+    color: 'bloom'
+  },
+  {
+    key: 'design',
+    tech: 'Figma · Design systems · Responsive UI · Motion',
+    color: 'ice'
+  }
 ]
 
 // Freelance service areas; prose under home.services.<key>.
@@ -54,13 +70,19 @@ const Home = () => {
     { year: '2021–2022', text: t('home.timeline.sodmongol') },
     { year: '2023–2024', text: t('home.timeline.mongolnet') },
     { year: '2025–2026', text: t('home.timeline.brexia') },
-    { year: 'now', text: t('home.timeline.now') },
+    { year: 'now', text: t('home.timeline.now') }
   ]
 
   return (
     <Layout title={t('home.pageTitle')}>
       {/* ——— Hero: the Magia stage ——— */}
-      <Box position="relative" minH={{ base: '76vh', md: '82vh' }} display="flex" alignItems="center" overflow="hidden">
+      <Box
+        position="relative"
+        minH={{ base: '76vh', md: '82vh' }}
+        display="flex"
+        alignItems="center"
+        overflow="hidden"
+      >
         {/* Washed-out portrait behind the title, like the Homura line art */}
         <Box
           position="absolute"
@@ -71,8 +93,10 @@ const Home = () => {
           h={{ base: '380px', md: '560px' }}
           opacity={0.1}
           sx={{
-            maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
+            maskImage:
+              'radial-gradient(ellipse at center, black 30%, transparent 70%)',
+            WebkitMaskImage:
+              'radial-gradient(ellipse at center, black 30%, transparent 70%)'
           }}
           pointerEvents="none"
           aria-hidden="true"
@@ -87,60 +111,35 @@ const Home = () => {
           />
         </Box>
 
-        <Container maxW="container.lg" px={{ base: 4, md: 6 }} position="relative">
+        <Container
+          maxW="container.lg"
+          px={{ base: 4, md: 6 }}
+          position="relative"
+        >
           <VStack spacing={6} textAlign="center">
-            <MotionBox {...rise(0)}>
-              <Box
-                display="inline-block"
-                bg="pane"
-                border="1px solid"
-                borderColor="hairline"
-                borderRadius="2px"
-                px={4}
-                py={2}
-                fontFamily="mono"
-                fontSize="xs"
-                color="rime"
-              >
-                {t('home.greeting')}
-              </Box>
-            </MotionBox>
-
             <MotionBox {...rise(0.1)}>
-              <Text
-                fontFamily="mono"
-                fontSize="xs"
-                color="rime"
-                letterSpacing="0.28em"
-                textTransform="uppercase"
-              >
+              <Text fontFamily="mono" fontSize="sm" color="rime">
                 {t('home.location')}
               </Text>
             </MotionBox>
 
             <MotionBox {...rise(0.25)}>
               <ShimokaTitle />
-              <Text
-                fontFamily="mono"
-                fontSize="sm"
-                color="rime"
-                letterSpacing="0.24em"
-                textTransform="uppercase"
-                mt={4}
-              >
-                {site.handle} — {t('home.frostFlower')}
-              </Text>
             </MotionBox>
 
             <MotionBox {...rise(0.4)}>
-              <Heading as="p" fontSize={{ base: 'xl', md: '2xl' }} fontWeight="500" maxW="30ch" mx="auto" mb={4}>
+              <Heading
+                as="p"
+                fontSize={{ base: 'xl', md: '2xl' }}
+                fontWeight="500"
+                maxW="30ch"
+                mx="auto"
+                mb={4}
+              >
                 {t('home.title')}
               </Heading>
               <Text fontSize={{ base: 'md', md: 'lg' }} maxW="56ch" mx="auto">
                 {t('home.description')}
-              </Text>
-              <Text mt={3} fontFamily="mono" fontSize="sm" color="rime" opacity={0.85}>
-                {t('home.subtitle')}
               </Text>
             </MotionBox>
 
@@ -156,7 +155,13 @@ const Home = () => {
                   {t('home.resumeButton')}
                 </Button>
               </HStack>
-              <Text mt={5} fontFamily="mono" fontSize="xs" color="ice" letterSpacing="0.08em">
+              <Text
+                mt={5}
+                fontFamily="mono"
+                fontSize="xs"
+                color="ice"
+                letterSpacing="0.08em"
+              >
                 {t('home.availability')}
               </Text>
               <HStack spacing={7} mt={8} justify="center" flexWrap="wrap">
@@ -187,22 +192,40 @@ const Home = () => {
       <Container maxW="container.lg" px={{ base: 4, md: 6 }}>
         {/* ——— Craft ——— */}
         <MotionBox {...riseInView}>
-          <Eyebrow kanji="業" color="ice">{t('home.craftLabel')}</Eyebrow>
-          <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} mb={10} maxW="24ch">
+          <Eyebrow kanji="業" color="ice">
+            {t('home.craftLabel')}
+          </Eyebrow>
+          <Heading
+            as="h2"
+            fontSize={{ base: '2xl', md: '3xl' }}
+            mb={10}
+            maxW="24ch"
+          >
             {t('home.craftHeading')}
           </Heading>
         </MotionBox>
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={12} spacingY={10}>
           {craft.map(item => (
-            <MotionBox key={item.key} {...riseInView} pt={5} borderTop="1px solid" borderColor="hairline">
+            <MotionBox
+              key={item.key}
+              {...riseInView}
+              pt={5}
+              borderTop="1px solid"
+              borderColor="hairline"
+            >
               <Heading as="h3" fontSize="xl" mb={2}>
                 {t(`home.craft.${item.key}.title`)}
               </Heading>
               <Text fontSize="sm" mb={3} maxW="46ch">
                 {t(`home.craft.${item.key}.description`)}
               </Text>
-              <Text fontFamily="mono" fontSize="xs" color={item.color} letterSpacing="0.08em">
+              <Text
+                fontFamily="mono"
+                fontSize="xs"
+                color={item.color}
+                letterSpacing="0.08em"
+              >
                 {item.tech}
               </Text>
             </MotionBox>
@@ -213,7 +236,9 @@ const Home = () => {
 
         {/* ——— The road ——— */}
         <MotionBox {...riseInView}>
-          <Eyebrow kanji="道" color="gold">{t('home.roadLabel')}</Eyebrow>
+          <Eyebrow kanji="道" color="gold">
+            {t('home.roadLabel')}
+          </Eyebrow>
           <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} mb={10}>
             {t('home.roadHeading')}
           </Heading>
@@ -239,7 +264,7 @@ const Home = () => {
                       top: '10px',
                       bottom: 0,
                       width: '1px',
-                      bg: 'hairline',
+                      bg: 'hairline'
                     }
               }
             >
@@ -262,15 +287,28 @@ const Home = () => {
 
         {/* ——— Services ——— */}
         <MotionBox {...riseInView}>
-          <Eyebrow kanji="助" color="ice">{t('home.servicesLabel')}</Eyebrow>
-          <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} mb={10} maxW="24ch">
+          <Eyebrow kanji="助" color="ice">
+            {t('home.servicesLabel')}
+          </Eyebrow>
+          <Heading
+            as="h2"
+            fontSize={{ base: '2xl', md: '3xl' }}
+            mb={10}
+            maxW="24ch"
+          >
             {t('home.servicesHeading')}
           </Heading>
         </MotionBox>
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacingX={12} spacingY={10}>
           {services.map(key => (
-            <MotionBox key={key} {...riseInView} pt={5} borderTop="1px solid" borderColor="hairline">
+            <MotionBox
+              key={key}
+              {...riseInView}
+              pt={5}
+              borderTop="1px solid"
+              borderColor="hairline"
+            >
               <Heading as="h3" fontSize="xl" mb={2}>
                 {t(`home.services.${key}.title`)}
               </Heading>
@@ -286,7 +324,12 @@ const Home = () => {
         {/* ——— Write to me ——— */}
         <MotionBox {...riseInView} pb={{ base: 4, md: 10 }}>
           <Eyebrow kanji="便">{t('home.getInTouch')}</Eyebrow>
-          <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }} maxW="20ch" mb={4}>
+          <Heading
+            as="h2"
+            fontSize={{ base: '3xl', md: '4xl' }}
+            maxW="20ch"
+            mb={4}
+          >
             {t('home.cta.pre')}
             <Box as="span" color="bloom">
               {t('home.cta.highlight')}
@@ -323,8 +366,8 @@ const Home = () => {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common'], nextI18NextConfig)),
-    },
+      ...(await serverSideTranslations(locale, ['common'], nextI18NextConfig))
+    }
   }
 }
 

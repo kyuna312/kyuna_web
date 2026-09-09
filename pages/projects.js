@@ -1,56 +1,78 @@
-import { Container, SimpleGrid, Text, HStack, Box, Heading, Link } from '@chakra-ui/react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import Layout from '../components/layouts/page';
-import { useTranslation } from 'next-i18next';
+import { Container, Text, HStack, Box, Heading, Link } from '@chakra-ui/react'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import Layout from '../components/layouts/page'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import nextI18NextConfig from '../next-i18next.config';
-import { motion } from 'framer-motion';
-import { IoLogoGithub, IoArrowForward } from 'react-icons/io5';
-import { site } from '../lib/site';
-import { defaultProjects } from '../lib/project-defaults';
-import { sql, ensureSchema } from '../lib/db';
-import { Eyebrow, CrystalDivider } from '../components/frost';
+import nextI18NextConfig from '../next-i18next.config'
+import { motion } from 'framer-motion'
+import { IoLogoGithub, IoArrowForward } from 'react-icons/io5'
+import { site } from '../lib/site'
+import {
+  defaultProjects,
+  projectGroups,
+  groupOf
+} from '../lib/project-defaults'
+import { sql, ensureSchema } from '../lib/db'
+import { Eyebrow, CrystalDivider, CrystalMark } from '../components/frost'
 
-const MotionBox = motion.create(Box);
+const MotionBox = motion.create(Box)
 
-const ProjectCard = ({ title, description, thumbnail, url, github, tech, featured, t }) => (
+// One kanji per section: 環 environment · 実 experiment · 品 product.
+const groupKanji = { tooling: '環', experiment: '実', products: '品' }
+
+const ProjectRow = ({
+  title,
+  description,
+  thumbnail,
+  url,
+  github,
+  tech,
+  featured,
+  t
+}) => (
   <Box
     as="article"
-    bg="pane"
-    border="1px solid"
+    display="grid"
+    gridTemplateColumns={{ base: '1fr', md: thumbnail ? '1fr 300px' : '1fr' }}
+    columnGap={10}
+    rowGap={5}
+    py={{ base: 8, md: 10 }}
+    borderTop="1px solid"
     borderColor="hairline"
-    borderRadius="2px"
-    overflow="hidden"
-    transition="border-color 0.25s ease"
-    _hover={{ borderColor: 'ice', '& img': { transform: 'scale(1.03)' } }}
+    role="group"
   >
-    {thumbnail && (
-      <Box position="relative" h="210px" overflow="hidden" borderBottom="1px solid" borderColor="hairline">
-        <Image
-          src={thumbnail}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
-        />
-      </Box>
-    )}
-    <Box p={6}>
-      <HStack justify="space-between" align="baseline" mb={2}>
-        <Heading as="h3" fontSize="xl">
-          {title}
-        </Heading>
+    <Box maxW="56ch">
+      <Heading
+        as="h3"
+        fontSize="2xl"
+        mb={3}
+        display="flex"
+        alignItems="center"
+        gap={3}
+      >
+        {title}
         {featured && (
-          <Text fontFamily="mono" fontSize="xs" color="bloom" letterSpacing="0.14em" textTransform="uppercase">
-            {t('projects.featured')}
-          </Text>
+          <Box
+            as="span"
+            color="bloom"
+            display="inline-flex"
+            title={t('projects.featured')}
+          >
+            <CrystalMark size={12} />
+          </Box>
         )}
-      </HStack>
+      </Heading>
       <Text fontSize="sm" mb={4}>
         {description}
       </Text>
-      <Text fontFamily="mono" fontSize="xs" color="ice" letterSpacing="0.08em" mb={5}>
+      <Text
+        fontFamily="mono"
+        fontSize="xs"
+        color="ice"
+        letterSpacing="0.08em"
+        mb={5}
+      >
         {tech}
       </Text>
       <HStack spacing={5}>
@@ -84,46 +106,104 @@ const ProjectCard = ({ title, description, thumbnail, url, github, tech, feature
         )}
       </HStack>
     </Box>
+    {thumbnail && (
+      <Box
+        as={url ? 'a' : 'div'}
+        href={url || undefined}
+        target={url ? '_blank' : undefined}
+        aria-hidden={url ? undefined : 'true'}
+        tabIndex={url ? -1 : undefined}
+        position="relative"
+        aspectRatio="16 / 10"
+        alignSelf="start"
+        border="1px solid"
+        borderColor="hairline"
+        borderRadius="2px"
+        overflow="hidden"
+        bg="pane"
+        transition="border-color 0.25s ease"
+        _groupHover={{ borderColor: 'ice' }}
+      >
+        <Image
+          src={thumbnail}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 300px"
+          style={{ objectFit: 'cover', objectPosition: 'top' }}
+        />
+      </Box>
+    )}
   </Box>
-);
+)
 
 const Projects = ({ rows }) => {
-  const { t } = useTranslation('common');
-  const { locale } = useRouter();
+  const { t } = useTranslation('common')
+  const { locale } = useRouter()
 
   const projects = rows.map(p => ({
     ...p,
-    description: p.descriptions?.[locale] || p.descriptions?.en || '',
-  }));
+    description: p.descriptions?.[locale] || p.descriptions?.en || ''
+  }))
 
   return (
-    <Layout title={t('projects.title')} description={t('projects.seo.description')}>
-      <Container maxW="container.lg" px={{ base: 4, md: 6 }} pt={{ base: 6, md: 14 }} pb={10}>
+    <Layout
+      title={t('projects.title')}
+      description={t('projects.seo.description')}
+    >
+      <Container
+        maxW="container.lg"
+        px={{ base: 4, md: 6 }}
+        pt={{ base: 6, md: 14 }}
+        pb={10}
+      >
         <MotionBox
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
           mb={12}
         >
-          <Eyebrow kanji="作" color="ice">{t('projects.selectedWork')}</Eyebrow>
+          <Eyebrow kanji="作" color="ice">
+            {t('projects.selectedWork')}
+          </Eyebrow>
           <Heading as="h1" fontSize={{ base: '4xl', md: '5xl' }} mb={4}>
             {t('projects.title')}
           </Heading>
           <Text maxW="56ch">{t('projects.description')}</Text>
         </MotionBox>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
-          {projects.map(project => (
-            <ProjectCard key={project.key} {...project} t={t} />
-          ))}
-        </SimpleGrid>
+        {projectGroups.map(group => {
+          const items = projects.filter(p => groupOf(p.key) === group)
+          if (!items.length) return null
+          return (
+            <Box key={group} as="section" mb={{ base: 14, md: 20 }}>
+              <Eyebrow
+                kanji={groupKanji[group]}
+                color={group === 'products' ? 'bloom' : 'ice'}
+              >
+                {t(`projects.groups.${group}`)}
+              </Eyebrow>
+              <Box borderBottom="1px solid" borderColor="hairline">
+                {items.map(project => (
+                  <ProjectRow key={project.key} {...project} t={t} />
+                ))}
+              </Box>
+            </Box>
+          )
+        })}
 
         <CrystalDivider my={{ base: 16, md: 20 }} />
 
         {/* Off the keyboard */}
         <Box>
-          <Eyebrow kanji="芸" color="gold">{t('projects.offKeyboard.label')}</Eyebrow>
-          <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} mb={4} maxW="24ch">
+          <Eyebrow kanji="芸" color="gold">
+            {t('projects.offKeyboard.label')}
+          </Eyebrow>
+          <Heading
+            as="h2"
+            fontSize={{ base: '2xl', md: '3xl' }}
+            mb={4}
+            maxW="24ch"
+          >
             {t('projects.offKeyboard.heading')}
           </Heading>
           <Text maxW="52ch" mb={6}>
@@ -145,20 +225,38 @@ const Projects = ({ rows }) => {
         </Box>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
 export async function getStaticProps({ locale }) {
   // Projects live in the database (edited from /admin); the lineup file is
   // the fallback when the table is empty or no database is configured.
-  let rows = null;
+  let rows = null
   try {
-    await ensureSchema();
-    const result = await sql`SELECT * FROM projects ORDER BY sort`;
+    await ensureSchema()
+    const result = await sql`SELECT * FROM projects ORDER BY sort`
     if (result.rows.length) {
-      rows = result.rows.map(({ key, title, descriptions, tech, url, github, thumbnail, featured }) => ({
-        key, title, descriptions, tech, url, github, thumbnail, featured,
-      }));
+      rows = result.rows.map(
+        ({
+          key,
+          title,
+          descriptions,
+          tech,
+          url,
+          github,
+          thumbnail,
+          featured
+        }) => ({
+          key,
+          title,
+          descriptions,
+          tech,
+          url,
+          github,
+          thumbnail,
+          featured
+        })
+      )
     }
   } catch {
     // fall through to defaults
@@ -166,10 +264,10 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'], nextI18NextConfig)),
-      rows: rows || defaultProjects(),
+      rows: rows || defaultProjects()
     },
-    revalidate: 60,
-  };
+    revalidate: 60
+  }
 }
 
-export default Projects;
+export default Projects

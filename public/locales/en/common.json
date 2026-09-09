@@ -40,6 +40,11 @@
     },
     "seo": {
       "description": "Selected work by Shimoka — developer environments, low-level experiments, and shipped products."
+    },
+    "groups": {
+      "tooling": "Environments and developer tooling",
+      "experiment": "Low-level experiments",
+      "products": "Shipped products"
     }
   },
   "home": {
