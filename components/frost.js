@@ -1,4 +1,5 @@
 import { Box, HStack, Text } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
 import { motion, useReducedMotion } from 'framer-motion'
 
 // One branch of a six-fold ice dendrite: a spine with paired spurs.
@@ -7,11 +8,17 @@ const BRANCH_PATHS = [
   'M 0 -46 L -26 -72 M 0 -46 L 26 -72',
   'M 0 -88 L -34 -122 M 0 -88 L 34 -122',
   'M 0 -128 L -20 -148 M 0 -128 L 20 -148',
-  'M 0 -168 L -8 -180 M 0 -168 L 8 -180 M 0 -168 L 0 -184',
+  'M 0 -168 L -8 -180 M 0 -168 L 8 -180 M 0 -168 L 0 -184'
 ]
 
 // A frost dendrite that draws itself in once, then holds still.
-export const FrostCrystal = ({ size = 420, delay = 0, opacity = 0.5, color = 'var(--chakra-colors-ice)', ...rest }) => {
+export const FrostCrystal = ({
+  size = 420,
+  delay = 0,
+  opacity = 0.5,
+  color = 'var(--chakra-colors-ice)',
+  ...rest
+}) => {
   const reduced = useReducedMotion()
 
   return (
@@ -40,7 +47,7 @@ export const FrostCrystal = ({ size = 420, delay = 0, opacity = 0.5, color = 'va
               transition={{
                 duration: 1.4,
                 delay: delay + i * 0.25,
-                ease: 'easeOut',
+                ease: 'easeOut'
               }}
             />
           ))}
@@ -65,7 +72,10 @@ export const CrystalMark = ({ size = 12, color = 'currentColor' }) => (
     {[0, 60, 120].map(angle => (
       <line
         key={angle}
-        x1="0" y1="-8" x2="0" y2="8"
+        x1="0"
+        y1="-8"
+        x2="0"
+        y2="8"
         stroke={color}
         strokeWidth="1.2"
         strokeLinecap="round"
@@ -123,12 +133,42 @@ export const PageFrame = () => (
 
 // The name, set like the MAGIA title: rules either side, one color per kanji —
 // 霜 (frost) in Sayaka blue, 花 (flower) in Madoka pink.
-export const ShimokaTitle = ({ fontSize = { base: '6xl', md: '8xl' }, ruleW = { base: '36px', md: '90px' } }) => (
+// On load the glyphs split into their two soul-gem channels for a moment,
+// like a signal locking in — then hold still. Skipped under reduced motion.
+const glitch = keyframes`
+  0%, 100% { text-shadow: none; transform: none; }
+  10% { text-shadow: -3px 0 var(--chakra-colors-ice), 3px 0 var(--chakra-colors-bloom); transform: translateX(1px); }
+  20% { text-shadow: 3px 0 var(--chakra-colors-ice), -3px 0 var(--chakra-colors-bloom); transform: translateX(-1px); clip-path: inset(30% 0 40% 0); }
+  30% { text-shadow: none; transform: none; clip-path: none; }
+  55% { text-shadow: -2px 0 var(--chakra-colors-ice), 2px 0 var(--chakra-colors-bloom); clip-path: inset(60% 0 10% 0); }
+  65% { text-shadow: none; clip-path: none; }
+`
+
+export const ShimokaTitle = ({
+  fontSize = { base: '6xl', md: '8xl' },
+  ruleW = { base: '36px', md: '90px' }
+}) => (
   <HStack spacing={{ base: 4, md: 7 }} justify="center" align="center">
     <Box h="2px" w={ruleW} bg="ink" />
-    <Text as="h1" fontFamily="heading" fontWeight="500" fontSize={fontSize} lineHeight="1.1" whiteSpace="nowrap">
-      <Box as="span" color="ice">霜</Box>
-      <Box as="span" color="bloom">花</Box>
+    <Text
+      as="h1"
+      fontFamily="heading"
+      fontWeight="500"
+      fontSize={fontSize}
+      lineHeight="1.1"
+      whiteSpace="nowrap"
+      sx={{
+        '@media (prefers-reduced-motion: no-preference)': {
+          animation: `${glitch} 1.6s steps(1) 0.5s 1`
+        }
+      }}
+    >
+      <Box as="span" color="ice">
+        霜
+      </Box>
+      <Box as="span" color="bloom">
+        花
+      </Box>
     </Text>
     <Box h="2px" w={ruleW} bg="ink" />
   </HStack>

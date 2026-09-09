@@ -121,8 +121,23 @@ const ProjectRow = ({
         borderRadius="2px"
         overflow="hidden"
         bg="pane"
-        transition="border-color 0.25s ease"
-        _groupHover={{ borderColor: 'ice' }}
+        transition="border-color 0.25s ease, box-shadow 0.25s ease"
+        _groupHover={{
+          borderColor: 'ice',
+          boxShadow:
+            '0 0 0 1px var(--chakra-colors-ice), 0 0 24px var(--chakra-colors-iceDim)'
+        }}
+        // Scanlines over the thumbnail — the one cyberpunk note on the page.
+        _after={{
+          content: '""',
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          backgroundImage:
+            'repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0 1px, transparent 1px 3px)',
+          mixBlendMode: 'multiply',
+          opacity: 0.6
+        }}
       >
         <Image
           src={thumbnail}
